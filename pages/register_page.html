@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hotel booking</title>
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Register</h1>
+        <form action="">
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="btn-field">
+                <button type="submit" id="registerBtn">Register</button>
+                <button type="submit" id="loginBtn" class="disable">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    let registerBtn = document.getElementById('registerBtn');
+    let loginBtn = document.getElementById('loginBtn');
+    let nameField = document.getElementById('nameField');
+    let title = document.getElementById('title');
+    loginBtn.onclick = function () {
+        nameField.style.maxHeight = "0";
+        title.innerHTML = 'Log In'
+        signupBtn.classList.toggle('disable');
+    }
+    registerBtn.onclick = function () {
+        nameField.style.maxHeight = "65px";
+        title.innerHTML = 'Register'
+        signupBtn.classList.toggle('disable');
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
