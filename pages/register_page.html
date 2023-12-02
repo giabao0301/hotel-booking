@@ -44,12 +44,14 @@
     loginBtn.onclick = function () {
         nameField.style.maxHeight = "0";
         title.innerHTML = 'Log In'
-        signupBtn.classList.toggle('disable');
+        registerBtn.classList.add("disable");
+        loginBtn.classList.remove("disable");
     }
     registerBtn.onclick = function () {
         nameField.style.maxHeight = "65px";
         title.innerHTML = 'Register'
-        signupBtn.classList.toggle('disable');
+        registerBtn.classList.remove("disable");
+        loginBtn.classList.add("disable");
     }
 </script>
 
