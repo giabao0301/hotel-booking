@@ -49,8 +49,8 @@ nav {
 }
 
 .register-btn {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     padding: 8px 20px;
     border-radius: 20px;
     text-decoration: none;
@@ -59,8 +59,8 @@ nav {
 }
 
 .register-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .container {
