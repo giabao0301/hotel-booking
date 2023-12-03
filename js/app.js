@@ -4,7 +4,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 const roomList = $(".rooms");
 const htmls = rooms.map((room) => {
-  return `<a href="#" class="room-item">
+  return `<a href="#" class="room-item" data-index="${room.id}">
             <img src="${room.image}" alt="room-${room.id}">
             <div>
                 <h3>${room.name}</h3>
@@ -16,8 +16,8 @@ const htmls = rooms.map((room) => {
 roomList.innerHTML = htmls.join("\n");
 
 roomList.onclick = function (e) {
-  const nodeRoom = e.target.children;
-  console.log(nodeRoom);
+  const nodeRoom = e.target.closest(".room-item");
+  const index = nodeRoom.getAttribute("data-index");
 };
 
 var navBar = document.getElementById("navBar");
