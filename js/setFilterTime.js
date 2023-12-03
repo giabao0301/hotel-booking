@@ -35,7 +35,7 @@ if (quantityValue != null) {
     quantitySelect.value = 1
 }
 
-if (guestSelect != null) {
+if (guestValue != null) {
     guestSelect.value = guestValue
 } else {
     guestSelect.value = 1
