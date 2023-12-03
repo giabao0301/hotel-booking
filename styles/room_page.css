@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/images/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.register-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .5s
+}
+
+.register-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    padding: 0 7%;
+    margin-top: 150px;
+}
+
+/* footer */
+footer {
+    margin: 100px 0 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+footer hr {
+    background-color: #999;
+    height: 1px;
+    border: 0;
+    margin: 20px 0;
+}
+
+footer p {
+    padding-bottom: 15px;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    background-color: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+
+nav .fa-bars {
+    display: none;
+}
+
+/* BEGIN responsive small screen devices (nav bar) */
+@media only screen and (max-width: 700px) {
+    .logo {
+        position: fixed;
+        top: 4%;
+        left: 7%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 90px 7% 0;
+        background-color: #000;
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+
+    nav .nav-links li {
+        margin: 15px 0;
+        display: block;
+    }
+
+    .register-btn {
+        margin: 15px 0 30px;
+        display: inline-block;
+    }
+
+    nav .fa-bars {
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 7%;
+        color: #fff;
+        font-size: 28px;
+    }
+
+    .active::after {
+        width: 80%;
+        bottom: -20%;
+    }
+
+    .hidemenu {
+        max-height: 300px;
+    }
+
+    .header h1 {
+        padding-top: 200px;
+        font-size: 7vw;
+    }
+
+    .register-btn {
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+/* BEGIN room page */
+.navBar--black {
+    background: #000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navBar--black .register-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.list-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-col {
+    flex-basis: 70%;
+}
+
+.right-col {
+    flex-basis: 25%;
+}
+
+.left-col h1 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.room {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+
+    cursor: pointer;
+}
+
+.room-img {
+    flex-basis: 40%;
+}
+
+.room-info {
+    flex-basis: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #555;
+}
+
+.room-img img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.room-info h3 {
+    font-weight: 600;
+    color: #333;
+    font-size: 22px;
+    margin: 4px 0;
+}
+
+
+.room-features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-features p {
+    display: flex;
+    align-items: center;
+}
+
+.room-features p img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.room-price h4 {
+    font-size: 20px;
+}
+
+.room-price h4 span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar {
+    border: 1px solid #999;
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    padding: 16px 24px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+.sidebar form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+.sidebar form div {
+    margin-bottom: 36px;
+}
+
+.sidebar form input[type='date'] {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    appearance: none;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 8px 12px;
+    line-height: 1.25;
+}
+
+.sidebar form select {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    appearance: none;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 8px 12px;
+    line-height: 1.25;
+}
+
+.sidebar form select:focus,
+.sidebar form input[type='date']:focus {
+    outline: none;
+}
+
+.sidebar form button {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    max-width: 180px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 30px;
+    transition: .5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sidebar form button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
+.right-arrow {
+    transform: rotate(180deg);
+}
+
+/* small screen for listing */
+
+@media only screen and (max-width: 700px) {
+    .list-container {
+        margin-top: 150px;
+    }
+
+    .left-col,
+    .right-col,
+    .room-img,
+    .room-info {
+        flex-basis: 100%;
+    }
+
+    .left-col h1 {
+        font-size: 22px;
+    }
+
+
+    .room-info h3 {
+        font-size: 18px;
+    }
+
+    .room-features {
+        display: none;
+    }
+
+    .room-info-description {
+        margin: 10px 0;
+    }
+
+    .pagination span {
+        margin: 10px 2px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
