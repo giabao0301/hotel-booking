@@ -1,4 +1,4 @@
-const rooms = [
+export const rooms = [
   {
     id: "1",
     name: "Grand Deluxe Room",
@@ -31,6 +31,9 @@ const rooms = [
     guest: 2,
     size: 30,
   },
+];
+
+export const suites = [
   {
     id: "5",
     name: "Deluxe Suite",
@@ -64,5 +67,3 @@ const rooms = [
     size: 55,
   },
 ];
-
-export default rooms;
