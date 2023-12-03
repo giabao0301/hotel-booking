@@ -286,7 +286,7 @@ header h1 {
 
 /* footer */
 footer {
-    margin: 80px 0 10px;
+    margin: 100px 0 10px;
     text-align: center;
 }
 
@@ -617,36 +617,12 @@ nav .fa-bars {
     background-color: #fff;
 }
 
-.pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.pagination img {
-    width: 15px;
-    margin: 10px 20px;
-}
 
 .right-arrow {
     transform: rotate(180deg);
 }
 
-.pagination span {
-    margin: 10px 8px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
 
-.pagination .current {
-    background: #333;
-    color: #fff;
-}
 
 /* room-detail page */
 .room-details {
