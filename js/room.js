@@ -20,7 +20,7 @@ const htmls = rooms.map((room) => {
                     all in refined comfort.
                 </p>
                 <div class="room-price">
-                    <h4>$ ${room.price} <span>/ night</span></h4>
+                    <h4>$${room.price} <span>/ night</span></h4>
                 </div>
             </div>
         </a>`;
