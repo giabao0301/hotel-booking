@@ -18,7 +18,7 @@ const checkinSelect = document.getElementById('checkin')
 const checkoutSelect = document.getElementById('checkout')
 
 checkinSelect.min = formattedDate
-checkoutSelect.min = nextDayFormatted
+checkoutSelect.min = checkinValue
 
 if (checkinValue != null) {
     checkinSelect.value = checkinValue
@@ -43,3 +43,14 @@ if (guestValue != null) {
 } else {
     guestSelect.value = 1
 }
+
+checkinSelect.addEventListener('change', () => {
+    
+    nextDay.setDate(new Date(checkinSelect.value).getDate() + 1)
+    const nextFormatted = nextDay.toISOString().split('T')[0];
+    checkoutSelect.min = nextFormatted
+    if (checkinSelect.value > checkoutSelect.value) {
+        checkoutSelect.value = nextFormatted
+    }
+
+})
