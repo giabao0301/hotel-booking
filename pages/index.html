@@ -30,7 +30,7 @@
         <div class="container">
             <h1>Find Your Next Stay</h1>
             <div class="search-bar">
-                <form action="">
+                <form id="searchForm" action="room_page.html">
                     <div>
                         <label for="checkin">Check in</label>
                         <input id="checkin" type="date">
@@ -42,31 +42,13 @@
                     <div>
                         <label for="quantity">Number of rooms</label>
                         <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                            <!-- JavaScript code will generate the options -->
                         </select>
                     </div>
                     <div>
                         <label for="guest">Guest</label>
                         <select name="guest" id="guest">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                            <!-- JavaScript code will generate the options -->
                         </select>
                     </div>
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -157,6 +139,9 @@
     </div>
 
     <script src="../js/app.js" type="module"></script>
+    <script src="../js/setTime.js"></script>
+    <script src="../js/quantitySelect.js"></script>
+    <script src="../js/roomFilter.js"></script>
 </body>
 
 </html>
