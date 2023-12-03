@@ -6,6 +6,7 @@ const formattedDate = currentDate.toISOString().split('T')[0];
 
 // Set the current date as the value for the check-in input element
 document.getElementById('checkin').value = formattedDate;
+document.getElementById('checkin').min = formattedDate;
 
 // Calculate the day after the check-in date
 const nextDay = new Date(currentDate);
@@ -16,3 +17,4 @@ const nextDayFormatted = nextDay.toISOString().split('T')[0];
 
 // Set the next day's date as the value for the checkout input element
 document.getElementById('checkout').value = nextDayFormatted;
+document.getElementById('checkout').min = nextDayFormatted;
