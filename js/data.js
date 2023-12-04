@@ -9,7 +9,7 @@ export const rooms = [
   },
   {
     id: "2",
-    name: "Grand Deluxe Room",
+    name: "Deluxe Room",
     image: "../assets/images/room-2.png",
     price: 2400,
     guest: 3,
@@ -17,7 +17,7 @@ export const rooms = [
   },
   {
     id: "3",
-    name: "Grand Deluxe Room",
+    name: "Executive Room",
     image: "../assets/images/room-3.png",
     price: 2320,
     guest: 2,
@@ -25,7 +25,7 @@ export const rooms = [
   },
   {
     id: "4",
-    name: "Grand Deluxe Room",
+    name: "Superior Room",
     image: "../assets/images/room-4.png",
     price: 2200,
     guest: 2,
