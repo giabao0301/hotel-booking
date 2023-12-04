@@ -28,7 +28,7 @@
         <ul class="nav-links">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="./room_page.html">Rooms</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./contact_page.html">Contact</a></li>
         </ul>
         <a href="./register_page.html" class="register-btn">Register Now</a>
         <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
@@ -48,13 +48,21 @@
             <div>
               <label for="quantity">Number of rooms</label>
               <select name="quantity" id="quantity">
-                <!-- JavaScript code will generate the options -->
+                <script>
+                  for (let i = 1; i <= 10; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                  }
+                </script>
               </select>
             </div>
             <div>
               <label for="guest">Guest</label>
               <select name="guest" id="guest">
-                <!-- JavaScript code will generate the options -->
+                <script>
+                  for (let i = 1; i <= 10; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                  }
+                </script>
               </select>
             </div>
             <button type="submit">
