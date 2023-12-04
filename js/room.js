@@ -2,9 +2,12 @@ import { rooms, suites } from "./data.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+const allRoomsSuites = [...rooms, ...suites];
+
 const roomList = $(".left-col");
-const htmls = rooms.map((room) => {
-  return `<a class="room" href="./room_details_page.html">
+
+const htmls = allRoomsSuites.map((room) => {
+  return `<a class="room-item" data-index="${room.id}">
             <div class="room-img">
                 <img src="${room.image}">
             </div>
@@ -29,8 +32,9 @@ const htmls = rooms.map((room) => {
 roomList.innerHTML = htmls.join("\n");
 
 roomList.onclick = function (e) {
-  const nodeRoom = e.target.children;
-  console.log(nodeRoom);
+  const nodeRoom = e.target.closest(".room-item");
+  const index = nodeRoom.getAttribute("data-index");
+  window.location.href = `room_details_page.html?roomId=${index}`;
 };
 
 var navBar = document.getElementById("navBar");

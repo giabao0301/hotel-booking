@@ -88,15 +88,6 @@ footer p {
 /* END responsive small screen devices for nav bar*/
 
 /* listing page */
-.navBar--black {
-    background: #000;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-}
-
-.navBar--black .register-btn {
-    background-color: #fff;
-    color: #000;
-}
 
 .room-features {
     display: flex;
@@ -152,7 +143,7 @@ footer p {
 
 .small-details .room-features {
     margin: 20px 0;
-    width: 50%;
+    width: 100%;
 }
 
 .line {
