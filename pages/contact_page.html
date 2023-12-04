@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
-        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../styles/contact_page.css">
-    <link rel="stylesheet" type="text/css" href="../styles/global_styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/contact_page.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/global_styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="navBar">
-            <img src="../assets/images/logo.png" alt="logo" class="logo" />
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./room_page.html">Rooms</a></li>
-                <li><a href="#" class="active">Contact</a></li>
-            </ul>
-            <a href="./register_page.html" class="register-btn">Register Now</a>
-            <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
-        </nav>
+      <nav id="navBar">
+        <img src="../assets/images/logo.png" alt="logo" class="logo" />
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./room_page.html">Rooms</a></li>
+          <li><a href="#" class="active">Contact</a></li>
+        </ul>
+        <a href="./register_page.html" class="register-btn">Register Now</a>
+        <i
+          class="fa-solid fa-bars"
+          onclick="document.getElementById('navBar').classList.toggle('hidemenu')"
+        ></i>
+      </nav>
     </header>
     <section class="contact">
-        <div class="content">
-            <h2>Contact Us</h2>
-            <p>
-                We are always happy to support our customers and partners.
-                If you have any questions or concerns, please contact us using the following information
-            </p>
-        </div>
-        <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <div class="text">
-                        <h3>Address</h3>
-                        <p>Thu Duc, Ho Chi Minh, Viet Nam</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <div class="text">
-                        <h3>Phone</h3>
-                        <p>+84 686868686</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <div class="text">
-                        <h3>Email</h3>
-                        <p>nhom_9@gm.uit.edu.vn</p>
-                    </div>
-                </div>
+      <div class="content">
+        <h2>Contact Us</h2>
+        <p>
+          We are always happy to support our customers and partners. If you have
+          any questions or concerns, please contact us using the following
+          information
+        </p>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
             </div>
-            <div class="contactForm">
-                <form action="">
-                    <h2>Send Message</h2>
-                    <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Full Name</span>
-                    </div>
-                    <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Email</span>
-</div>
-                    <div class="inputBox">
-                        <textarea type="text" name="" required="required"></textarea>
-                        <span>Type your message...</span>
-                    </div>
-                    <div class="inputBox">
-                        <input type="submit" name="" value="Send">
-                    </div>
-                </form>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Thu Duc, Ho Chi Minh, Viet Nam</p>
             </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+84 686868686</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>nhom_9@gm.uit.edu.vn</p>
+            </div>
+          </div>
         </div>
+        <div class="contactForm">
+          <form action="">
+            <h2>Send Message</h2>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <textarea type="text" name="" required="required"></textarea>
+              <span>Type your message...</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" name="" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
