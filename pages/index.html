@@ -23,20 +23,52 @@
 
   <body>
     <header>
-      <nav id="navBar">
-        <img src="../assets/images/logo.png" alt="logo" class="logo" />
-        <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="./room_page.html">Rooms</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <a href="./register_page.html" class="register-btn">Register Now</a>
-        <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
-      </nav>
-      <div class="container">
-        <h1>Find Your Best Stay</h1>
-        <div class="search-bar">
-          <form action="">
+        <nav id="navBar">
+            <img src="../assets/images/logo.png" alt="logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="./room_page.html">Rooms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="./register_page.html" class="register-btn">Register Now</a>
+            <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
+        </nav>
+        <div class="container">
+            <h1>Find Your Next Stay</h1>
+            <div class="search-bar">
+                <form id="searchForm" action="room_page.html">
+                    <div>
+                        <label for="checkin">Check in</label>
+                        <input id="checkin" type="date">
+                    </div>
+                    <div>
+                        <label for="checkout">Check out</label>
+                        <input id="checkout" type="date">
+                    </div>
+                    <div>
+                        <label for="quantity">Number of rooms</label>
+                        <select name="quantity" id="quantity">
+                            <!-- JavaScript code will generate the options -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="guest">Guest</label>
+                        <select name="guest" id="guest">
+                            <!-- JavaScript code will generate the options -->
+                        </select>
+                    </div>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="sub-title">Rooms</h2>
+
+        <div class="rooms"><!-- room item goes here --></div>
+
+        <h2 class="sub-title">Services</h2>
+        <div class="services">
             <div>
               <label for="checkin">Check in</label>
               <input id="checkin" type="date" />
@@ -186,5 +218,10 @@
     </div>
 
     <script src="../js/app.js" type="module"></script>
-  </body>
+    <script src="../js/setTime.js"></script>
+    <script src="../js/quantitySelect.js"></script>
+    <script src="../js/roomFilter.js"></script>
+</body>
+
 </html>
+

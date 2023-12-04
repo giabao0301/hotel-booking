@@ -42,3 +42,10 @@ const htmls = `<div class="gallery">
 roomDetails.innerHTML = htmls;
 
 console.log(`haha ${roomId}`);
+
+
+var navBar = document.getElementById("navBar");
+function togglebnt() {
+  navBar.classList.toggle("hidemenu");
+}
+
