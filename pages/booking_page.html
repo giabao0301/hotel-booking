@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/booking_page.css" />
+    <link rel="stylesheet" href="../styles/global_styles.css" />
+    <title>Hotel booking</title>
+  </head>
+  <body>
+    <div class="checkout-container">
+      <div class="left-side">
+        <div class="text-box">
+          <h1 class="home-heading">Modern Home</h1>
+          <p class="home-price">249.50 USD / 1 night</p>
+          <p class="home-desc"><i>Entire home for 2 guest</i></p>
+          <p class="home-desc">
+            <i>Tue, July 23, 2022 to Thu, July 25, 2022</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="receipt">
+          <div class="payment-info">
+            <h1 class="payment-heading">Payment Information</h1>
+            <form
+              class="form-box"
+              enctype="text/plain"
+              method="get"
+              target="_blank"
+            >
+              <div>
+                <label for="full-name">Full Name</label>
+                <input
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Enter your name"
+                  required
+                  type="text"
+                />
+              </div>
+
+              <div>
+                <label for="credit-card-num">Phone Number</label>
+                <input
+                  id="credit-card-num"
+                  name="credit-card-num"
+                  placeholder="Enter your phone number"
+                  required
+                  type="number"
+                />
+              </div>
+            </form>
+          </div>
+          <div>
+            <table class="table">
+              <tr>
+                <td>249.50 x 2 nights</td>
+                <td class="price">499.00 USD</td>
+              </tr>
+              <tr class="total">
+                <td>Total</td>
+                <td class="price">546.41 USD</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <button class="btn"><i class="fa-solid fa-lock"></i> Book Now</button>
+      </div>
+    </div>
+    <script src="../js//booking.js"></script>
+  </body>
+</html>
+
+<body></body>
