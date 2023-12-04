@@ -18,7 +18,6 @@ roomList.innerHTML = htmls.join("\n");
 roomList.onclick = function (e) {
   const nodeRoom = e.target.closest(".room-item");
   const index = nodeRoom.getAttribute("data-index");
-  console.log(index);
   window.location.href = `room_details_page.html?roomId=${index}`;
 };
 
