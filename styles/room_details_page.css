@@ -167,9 +167,10 @@ footer p {
     margin-right: 14px;
     margin-top: 24px;
     transition: .5s;
+    cursor: pointer;
 }
 
-.check-form button:hover {
+.container button:hover {
     color: #000;
     background-color: #ccc;
 }
