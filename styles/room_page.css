@@ -23,12 +23,8 @@ footer p {
 }
 
 
-
-
-
 .container {
-    padding: 0 7%;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 /* BEGIN responsive small screen devices (nav bar) */
@@ -114,13 +110,12 @@ footer p {
     margin-bottom: 30px;
 }
 
-.room {
+.room-item {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 0;
     border-top: 1px solid #ccc;
-
     cursor: pointer;
 }
 
