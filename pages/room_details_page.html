@@ -31,7 +31,10 @@
         <li><a href="./contact_page.html">Contact</a></li>
       </ul>
       <a href="./register_page.html" class="register-btn">Register Now</a>
-      <i class="fas fa-bars" onclick="togglebtn()"></i>
+      <i
+        class="fa-solid fa-bars"
+        onclick="document.getElementById('navBar').classList.toggle('hidemenu')"
+      ></i>
     </nav>
     <div class="container">
       <div class="room-details"></div>
@@ -65,14 +68,6 @@
         <p>Copyright &copy; 2023, The Hotel</p>
       </footer>
     </div>
-
-     <script>
-      var navBar = document.getElementById("navBar");
-      function togglebnt() {
-        navBar.classList.toggle("hidemenu");
-      }
-    </script>
     <script src="../js/room_detail.js" type="module"></script>
   </body>
 </html>
-

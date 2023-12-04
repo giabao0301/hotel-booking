@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <nav id="navBar" class="navBar">
+    <nav id="navBar">
       <img src="../assets/images/logo.png" class="logo" />
       <ul class="nav-links">
         <li><a href="./index.html">Home</a></li>
@@ -30,7 +30,10 @@
         <li><a href="./contact_page.html">Contact</a></li>
       </ul>
       <a href="./register_page.html" class="register-btn">Register Now</a>
-      <i class="fas fa-bars"></i>
+      <i
+        class="fa-solid fa-bars"
+        onclick="document.getElementById('navBar').classList.toggle('hidemenu')"
+      ></i>
     </nav>
     <div class="wrapper">
       <div class="form-box">
@@ -78,4 +81,3 @@
     </script>
   </body>
 </html>
-

@@ -44,8 +44,3 @@ roomList.onclick = function (e) {
   const index = nodeRoom.getAttribute("data-index");
   window.location.href = `room_details_page.html?roomId=${index}`;
 };
-
-var navBar = document.getElementById("navBar");
-navBar.onclick = function toggleBtn() {
-  navBar.classList.toggle("hidemenu");
-};
