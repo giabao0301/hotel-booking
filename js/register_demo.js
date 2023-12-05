@@ -19,7 +19,7 @@ registerForm.addEventListener('submit', function (event) {
 
         // Redirect to the desired page or display a success message
         alert('Registration successful!');
-        // window.location.href = 'login.html';
+        window.location.href = 'login_demo.html';
     } else {
         // Email is already registered, display error message
         alert('This email is already registered. Please use a different email.');

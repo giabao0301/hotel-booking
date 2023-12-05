@@ -24,3 +24,4 @@ const showHiddenPass = (loginPass, loginEye) => {
 }
 
 showHiddenPass('login_pass', 'login-eye')
+showHiddenPass('register_pass', 'login-eye')
