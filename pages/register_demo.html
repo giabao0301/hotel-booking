@@ -1,90 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== REMIXICONS ===============-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="../styles/style_demo.css" />
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <title>RealHood Hotel</title>
-  </head>
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="../styles/style_demo.css">
 
-  <body>
-    <div class="login">
-      <img
-        src="../assets/images/bg_demo.jpg"
-        alt="login image"
-        class="login__img"
-      />
+  <title>RealHood Hotel</title>
+</head>
 
-      <form action="" class="login__form" id="register_form">
-        <h1 class="login__title">Register</h1>
+<body>
+  <div class="login">
+    <img src="../assets/images/bg_demo.jpg" alt="login image" class="login__img">
 
-        <div class="login__content">
-          <div class="login__box">
-            <i class="ri-user-3-line login__icon"></i>
+    <form action="" class="login__form" id="register_form">
+      <h1 class="login__title">Register</h1>
 
-            <div class="login__box-input">
-              <input
-                type="text"
-                required
-                class="login__input"
-                id="register_username"
-                placeholder=" "
-              />
-              <label for="login-username" class="login__label">Username</label>
-            </div>
-          </div>
+      <div class="login__content">
+        <div class="login__box">
+          <i class="ri-user-3-line login__icon"></i>
 
-          <div class="login__box">
-            <i class="ri-mail-line login__icon"></i>
-
-            <div class="login__box-input">
-              <input
-                type="email"
-                required
-                class="login__input"
-                id="register_email"
-                placeholder=" "
-              />
-              <label for="login-email" class="login__label">Email</label>
-            </div>
-          </div>
-
-          <div class="login__box">
-            <i class="ri-lock-2-line login__icon"></i>
-
-            <div class="login__box-input">
-              <input
-                type="password"
-                required
-                class="login__input"
-                id="register_pass"
-                placeholder=" "
-              />
-              <label for="login-pass" class="login__label">Password</label>
-              <i class="ri-eye-off-line login__eye" id="login-eye"></i>
-            </div>
+          <div class="login__box-input">
+            <input type="text" required class="login__input" id="register_username" placeholder=" ">
+            <label for="login-username" class="login__label">Username</label>
           </div>
         </div>
 
-        <button type="submit" class="login__button">Register</button>
+        <div class="login__box">
+          <i class="ri-mail-line login__icon"></i>
 
-        <p class="login__register">
-          Already have an account? <a href="login_demo.html">Login</a>
-        </p>
-      </form>
-    </div>
+          <div class="login__box-input">
+            <input type="email" required class="login__input" id="register_email" placeholder=" ">
+            <label for="login-email" class="login__label">Email</label>
+          </div>
+        </div>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="../js/showHiddenPass.js"></script>
-    <script src="../js/register_demo.js"></script>
-  </body>
+        <div class="login__box">
+          <i class="ri-lock-2-line login__icon"></i>
+
+          <div class="login__box-input">
+            <input type="password" required class="login__input" id="register_pass" placeholder=" ">
+            <label for="login-pass" class="login__label">Password</label>
+            <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="login__button">Register</button>
+
+      <p class="login__register">
+        Already have an account? <a href="login_demo.html">Login</a>
+      </p>
+    </form>
+  </div>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="../js/showHiddenPass.js"></script>
+  <script src="../js/register_demo.js"></script>
+</body>
+
 </html>
