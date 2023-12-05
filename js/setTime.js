@@ -22,11 +22,16 @@ const nextDayFormatted = nextDay.toISOString().split("T")[0];
 checkoutSelect.value = nextDayFormatted;
 checkoutSelect.min = nextDayFormatted;
 
-checkinSelect.addEventListener("change", () => {
-  nextDay.setDate(new Date(checkinSelect.value).getDate() + 1);
-  const nextFormatted = nextDay.toISOString().split("T")[0];
-  checkoutSelect.min = nextFormatted;
-  if (checkinSelect.value > checkoutSelect.value) {
-    checkoutSelect.value = nextFormatted;
-  }
-});
+
+checkinSelect.addEventListener('change', () => {
+
+    const checkinDate = new Date(checkinSelect.value);
+    const nextDay = new Date(checkinDate.getTime() + 24 * 60 * 60 * 1000);
+    const nextFormatted = nextDay.toISOString().split('T')[0];
+    checkoutSelect.min = nextFormatted;
+    
+    if (checkinSelect.value >= checkoutSelect.value) {
+        checkoutSelect.value = nextFormatted;
+    }
+})
+

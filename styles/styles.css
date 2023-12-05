@@ -299,22 +299,15 @@ nav .fa-bars {
         margin-top: 100px;
     }
 
-
-
-
-
     .active::after {
         width: 80%;
         bottom: -20%;
     }
 
-
-
     .header h1 {
         padding-top: 200px;
         font-size: 7vw;
     }
-
 
     .search-bar {
         width: 90%;
