@@ -2,10 +2,10 @@
 const currentDate = new Date();
 
 // Format the date as YYYY-MM-DD
-const formattedDate = currentDate.toISOString().split('T')[0];
+const formattedDate = currentDate.toISOString().split("T")[0];
 
-const checkinSelect = document.getElementById('checkin')
-const checkoutSelect = document.getElementById('checkout')
+const checkinSelect = document.getElementById("checkin");
+const checkoutSelect = document.getElementById("checkout");
 
 // Set the current date as the value for the check-in input element
 checkinSelect.value = formattedDate;
@@ -16,11 +16,12 @@ const nextDay = new Date(currentDate);
 nextDay.setDate(currentDate.getDate() + 1);
 
 // Format the next day's date as YYYY-MM-DD
-const nextDayFormatted = nextDay.toISOString().split('T')[0];
+const nextDayFormatted = nextDay.toISOString().split("T")[0];
 
 // Set the next day's date as the value for the checkout input element
 checkoutSelect.value = nextDayFormatted;
 checkoutSelect.min = nextDayFormatted;
+
 
 checkinSelect.addEventListener('change', () => {
 
@@ -33,3 +34,4 @@ checkinSelect.addEventListener('change', () => {
         checkoutSelect.value = nextFormatted;
     }
 })
+
