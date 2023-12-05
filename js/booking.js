@@ -75,29 +75,28 @@ checkout.addEventListener('change', () => {
 const bookingButton = document.getElementById('booking_btn')
 const phoneInput = document.getElementById('phone-num')
 const nameInput = document.getElementById('full-name')
-console.log(nameInput.value);
-console.log(phoneInput.value);
 bookingButton.addEventListener('click', () => {
   console.log(nameInput.value);
   console.log(phoneInput.value);
   if (phoneInput.value != '' && nameInput.value != '') {
-    window.location.href = `payment.html?phoneNum=${phoneInput.value}&fullName=${nameInput.value}&price=${roomPrice}&totalPrice=${totalPrice}&night=${dayNumber}&roomNumber=${quantitySelect.value}`;
+    const paymentMethodElement = document.querySelector('.payment-method');
+    const radioButtons = paymentMethodElement.querySelectorAll('input[type="radio"]');
+    let selectedValue;
+
+    radioButtons.forEach(radioButton => {
+      if (radioButton.checked) {
+        selectedValue = radioButton.id;
+      }
+    });
+    console.log(selectedValue);
+    if (selectedValue == 'cash') {
+      window.location.href = `index.html`
+    } else {
+      window.location.href = `payment.html?phoneNum=${phoneInput.value}&fullName=${nameInput.value}&price=${roomPrice}&totalPrice=${totalPrice}&night=${dayNumber}&roomNumber=${quantitySelect.value}`;
+    }
   } else {
     alert('Please input required information')
   }
 })
 
-const paymentMethodElement = document.querySelector('.payment-method');
 
-// Get all the radio buttons within the <div> element
-const radioButtons = paymentMethodElement.querySelectorAll('input[type="radio"]');
-
-// Initialize a variable to store the selected value
-let selectedValue;
-
-// Loop through the radio buttons to find the selected one
-radioButtons.forEach(radioButton => {
-  if (radioButton.checked) {
-    selectedValue = radioButton.value;
-  }
-});
