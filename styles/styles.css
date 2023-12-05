@@ -368,3 +368,115 @@ nav .fa-bars {
         font-size: 15px;
     }
 }
+
+/* Small screen devices */
+@media only screen and (max-width: 700px) {}
+
+/* Tablet screen devices */
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+    .logo {
+        position: fixed;
+        top: 2%;
+        left: 7%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 90px 7% 0;
+        background-color: #000;
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+
+    .container {
+        padding: 0 7%;
+    }
+
+    .active::after {
+        width: 80%;
+        bottom: -20%;
+    }
+
+    .header h1 {
+        padding-top: 200px;
+        font-size: 7vw;
+    }
+
+    .search-bar {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .search-bar form {
+        display: block;
+    }
+
+    .search-bar form input {
+        border: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .search-bar form button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .sub-title {
+        font-size: 6vw;
+    }
+
+    .banner {
+        padding: 15% 5%;
+    }
+
+    .banner h3 {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .banner-btn {
+        padding: 6px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .special p {
+        font-size: 22px;
+    }
+
+    .about-msg {
+        font-size: 15px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 30px;
+        margin-bottom: 10px;
+    }
+
+    .rooms {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
+    }
+}

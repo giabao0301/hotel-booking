@@ -41,7 +41,7 @@ if (quantityValue != null) {
 if (guestValue != null) {
   guestSelect.value = guestValue;
 } else {
-  guestSelect.value = 1;
+  guestSelect.value = 2;
 }
 
 checkinSelect.addEventListener("change", () => {
