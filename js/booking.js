@@ -52,16 +52,22 @@ quantitySelect.addEventListener('change', () => {
 
 checkin.addEventListener('change', () => {
   startDate = new Date(checkin.value)
-  dayNumber = secondToDay(endDate.getTime() - startDate.getTime()) 
+  if (startDate < endDate) {
+    dayNumber = secondToDay(endDate.getTime() - startDate.getTime())
+  } else {
+    const nextDay = new Date(currentDate);
+    nextDay.setDate(startDate.getDate() + 1);
+    dayNumber = secondToDay(nextDay.getTime() - startDate.getTime())
+  }
   totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
   const totalPriceElement = document.getElementById('totalPrice');
-  totalPriceElement.textContent = `${totalPrice} USD`; 
+  totalPriceElement.textContent = `${totalPrice} USD`;
 })
 
 checkout.addEventListener('change', () => {
   endDate = new Date(checkout.value)
-  dayNumber = secondToDay(endDate.getTime() - startDate.getTime()) 
+  dayNumber = secondToDay(endDate.getTime() - startDate.getTime())
   totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
   const totalPriceElement = document.getElementById('totalPrice');
-  totalPriceElement.textContent = `${totalPrice} USD`;  
+  totalPriceElement.textContent = `${totalPrice} USD`;
 })
