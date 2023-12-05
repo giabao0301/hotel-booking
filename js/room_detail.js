@@ -8,10 +8,7 @@ const allRoomsSuites = [...rooms, ...suites];
 
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get("roomId");
-const checkIn = urlParams.get("checkin");
-const checkOut = urlParams.get("checkout");
 
-console.log(checkIn);
 const choosenRoom = allRoomsSuites.find((room) => {
   return room.id === roomId;
 });
@@ -51,7 +48,7 @@ const bookBtn = $("#book-btn");
 
 bookBtn.onclick = function () {
   const { id, name, image, guest, size, price } = choosenRoom;
-  window.location.href = `booking_page.html?roomId=${id}&checkin=${checkIn}&checkout=${checkOut}&name=${name}&image=${image}&guest=${guest}&size=${size}&price=${price}`;
+  window.location.href = `booking_page.html?roomId=${id}&name=${name}&image=${image}&guest=${guest}&size=${size}&price=${price}`;
 };
 
 console.log(`haha ${roomId}`);
