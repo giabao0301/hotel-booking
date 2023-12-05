@@ -21,7 +21,7 @@ const nextDayFormatted = nextDay.toISOString().split("T")[0];
 // Set the next day's date as the value for the checkout input element
 checkoutSelect.value = nextDayFormatted;
 checkoutSelect.min = nextDayFormatted;
-
+console.log('time is set');
 
 checkinSelect.addEventListener('change', () => {
 

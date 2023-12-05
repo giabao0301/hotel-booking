@@ -4,6 +4,8 @@ const $$ = document.querySelectorAll.bind(document);
 const leftSide = $(".left-side");
 const totalAmount = $(".total-amount");
 
+const secondToDay = (value) => Math.floor(value / (1000 * 60 * 60 * 24));
+const priceCal = (day, price, night) => day * price * night
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get("roomId");
 const roomImage = urlParams.get("image");
@@ -11,10 +13,14 @@ const roomName = urlParams.get("name");
 const roomSize = urlParams.get("size");
 const roomGuest = urlParams.get("guest");
 const roomPrice = urlParams.get("price");
-const checkIn = $("#checkin");
-const checkOut = $("#checkout");
-
-console.log(checkOut.value);
+const checkin = document.getElementById("checkin");
+const checkout = document.getElementById("checkout");
+const quantitySelect = document.getElementById('quantity')
+let startDate = new Date(checkin.value)
+let endDate = new Date(checkout.value)
+let dayNumber = secondToDay(endDate.getTime() - startDate.getTime())
+console.log(quantity);
+let totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
 
 const roomInfoHtmls = `<image src="${roomImage}" alt="room-image"/>
                         <div class="text-box">
@@ -32,8 +38,30 @@ const totalAmountHtmls = `<table class="table">
                               </tr>
                               <tr class="total">
                                 <td>Total</td>
-                                <td class="price">546.41 USD</td>
+                                <td id="totalPrice" class="price">${totalPrice} USD</td>
                               </tr>
                             </table>`;
 
 totalAmount.innerHTML = totalAmountHtmls;
+
+quantitySelect.addEventListener('change', () => {
+  totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = `${totalPrice} USD`;
+})
+
+checkin.addEventListener('change', () => {
+  startDate = new Date(checkin.value)
+  dayNumber = secondToDay(endDate.getTime() - startDate.getTime()) 
+  totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = `${totalPrice} USD`; 
+})
+
+checkout.addEventListener('change', () => {
+  endDate = new Date(checkout.value)
+  dayNumber = secondToDay(endDate.getTime() - startDate.getTime()) 
+  totalPrice = priceCal(dayNumber, roomPrice, quantitySelect.value)
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = `${totalPrice} USD`;  
+})
