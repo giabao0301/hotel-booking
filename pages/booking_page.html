@@ -15,21 +15,11 @@
   </head>
   <body>
     <div class="checkout-container">
-      <div class="left-side">
-        <div class="text-box">
-          <h1 class="home-heading">Modern Home</h1>
-          <p class="home-price">249.50 USD / 1 night</p>
-          <p class="home-desc"><i>Entire home for 2 guest</i></p>
-          <p class="home-desc">
-            <i>Tue, July 23, 2022 to Thu, July 25, 2022</i>
-          </p>
-        </div>
-      </div>
-
+      <div class="left-side"></div>
       <div class="right-side">
         <div class="receipt">
           <div class="payment-info">
-            <h1 class="payment-heading">Payment Information</h1>
+            <h1 class="payment-heading">Make a reservation</h1>
             <form
               class="form-box"
               enctype="text/plain"
@@ -57,25 +47,43 @@
                   type="tel"
                 />
               </div>
+              <div>
+                <label for="checkin">Check in</label>
+                <input id="checkin" type="date" />
+              </div>
+              <div>
+                <label for="checkout">Check out</label>
+                <input id="checkout" type="date" />
+              </div>
+              <div class="quantity">
+                <label for="quantity">Number of rooms</label>
+                <select name="quantity" id="quantity">
+                  <script>
+                    for (let i = 1; i <= 10; i++) {
+                      document.write(`<option value="${i}">${i}</option>`);
+                    }
+                  </script>
+                </select>
+              </div>
+              <div class="payment-method">
+                <div>
+                  <input type="radio" name="payment" id="cash" />
+                  <label for="cash">Cash</label>
+                </div>
+                <div>
+                  <input type="radio" name="payment" id="banking" />
+                  <label for="banking">Internet Banking</label>
+                </div>
+              </div>
             </form>
           </div>
-          <div>
-            <table class="table">
-              <tr>
-                <td>249.50 x 2 nights</td>
-                <td class="price">499.00 USD</td>
-              </tr>
-              <tr class="total">
-                <td>Total</td>
-                <td class="price">546.41 USD</td>
-              </tr>
-            </table>
-          </div>
+          <div class="total-amount"></div>
         </div>
         <button class="btn"><i class="fa-solid fa-lock"></i> Book Now</button>
       </div>
     </div>
-    <script src="../js//booking.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/setTime.js"></script>
   </body>
 </html>
 
