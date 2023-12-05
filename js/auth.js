@@ -9,7 +9,7 @@ function updateRegisterButton() {
     registerButton.innerHTML = '<i class="fas fa-user"></i> User Account';
     registerButton.href = 'user_info.html'
   } else {
-    registerButton.innerHTML = '<i class="fas fa-user"></i> Register Now';
+    registerButton.innerHTML = 'Register Now';
     registerButton.href = 'register_demo.html'
   }
 }
