@@ -7,6 +7,7 @@ const nightsParam = urlParams.get("night");
 const totalPriceParam = urlParams.get("totalPrice");
 const roomNumberParam = urlParams.get("roomNumber");
 
+const paymentForm = document.getElementById('payment-form')
 const paymentPrice = document.getElementById('payment-price')
 const paymentNight = document.getElementById('payment-night')
 const paymentRoom = document.getElementById('payment-room')
@@ -28,7 +29,13 @@ console.log(emailInput.value);
 paymentSubmitButton.addEventListener('click', () => {
     if (emailInput.value != '' && cardNumberInput.value != '' && cvvInput.value) {
         window.location.href = `index.html`;
+        console.log('match');
     } else {
+        console.log('unmatch');
         alert('Please input required information')
     }
+})
+
+paymentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 })
