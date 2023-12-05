@@ -1,78 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../styles/room_details_page.css" />
-    <link rel="stylesheet" href="../styles/global_styles.css" />
 
-    <title>Hotel booking</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../styles/room_details_page.css">
+  <link rel="stylesheet" href="../styles/global_styles.css">
 
-  <body>
-    <nav id="navBar" class="navBar">
-      <img src="../assets/images/logo.png" class="logo" />
-      <ul class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./room_page.html" class="active">Rooms</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <a href="./register_page.html" class="register-btn">Register Now</a>
-      <i class="fas fa-bars" onclick="togglebtn()"></i>
-    </nav>
-    <div class="container">
-      <div class="room-details"></div>
+  <title>RealHood Hotel</title>
+</head>
 
-      <div class="map">
-        <h3>Location on map</h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125404.23326950238!2d106.70744737974717!3d10.820319194745519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d85e042bf04b%3A0xbb26baec1664394d!2zVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700061768442!5m2!1svi!2s"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <b>Thu Duc, Ho Chi Minh, Viet Nam</b>
-        <p>It's a like home away from home.</p>
-      </div>
-
-      <footer>
-        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://linkedin.com"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="https://instagram.com"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <hr />
-        <p>Copyright &copy; 2023, The Hotel</p>
-      </footer>
+<body>
+  <nav id="navBar" class="navBar">
+    <img src="../assets/images/logo.png" class="logo">
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./room_page.html" class="active">Rooms</a></li>
+      <li><a href="./contact_page.html">Contact</a></li>
+    </ul>
+    <a href="./register_demo.html" class="register-btn" id="register_btn">Register Now</a>
+    <i class="fa-solid fa-bars" onclick="document.getElementById('navBar').classList.toggle('hidemenu')"></i>
+  </nav>
+  <div class="container">
+    <div class="room-details">
+      <!-- room details go here -->
     </div>
 
-     <script>
-      var navBar = document.getElementById("navBar");
-      function togglebnt() {
-        navBar.classList.toggle("hidemenu");
-      }
-    </script>
-    <script src="../js/room_detail.js" type="module"></script>
-  </body>
-</html>
+    <div class="map">
+      <h3>Location on map</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125404.23326950238!2d106.70744737974717!3d10.820319194745519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d85e042bf04b%3A0xbb26baec1664394d!2zVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700061768442!5m2!1svi!2s"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <b>Thu Duc, Ho Chi Minh, Viet Nam</b>
+      <p>It's a like home away from home.</p>
+    </div>
 
+    <footer>
+      <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+      <hr>
+      <p>Copyright &copy; 2023, The Hotel</p>
+    </footer>
+  </div>
+  <script src="../js/room_detail.js" type="module"></script>
+  <script src="../js/auth.js" type="module"></script>
+</body>
+
+</html>

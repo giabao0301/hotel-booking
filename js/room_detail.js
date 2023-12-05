@@ -3,10 +3,13 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const roomDetails = $(".room-details");
+
+const allRoomsSuites = [...rooms, ...suites];
+
 const urlParams = new URLSearchParams(window.location.search);
 const roomId = urlParams.get("roomId");
 
-const choosenRoom = rooms.find((room) => {
+const choosenRoom = allRoomsSuites.find((room) => {
   return room.id === roomId;
 });
 
@@ -35,17 +38,17 @@ const htmls = `<div class="gallery">
                 <p><img src="../assets/images/balcony.png" alt=""><span>Balcony</span></p>
                 </div>
                 <h4>$${choosenRoom.price} / night</h4>
-                <button>Book now</button>
+                <button id="book-btn">Book now</button>
                 <hr class="line">
             </div>`;
 
 roomDetails.innerHTML = htmls;
 
+const bookBtn = $("#book-btn");
+
+bookBtn.onclick = function () {
+  const { id, name, image, guest, size, price } = choosenRoom;
+  window.location.href = `booking_page.html?roomId=${id}&name=${name}&image=${image}&guest=${guest}&size=${size}&price=${price}`;
+};
+
 console.log(`haha ${roomId}`);
-
-
-var navBar = document.getElementById("navBar");
-function togglebnt() {
-  navBar.classList.toggle("hidemenu");
-}
-

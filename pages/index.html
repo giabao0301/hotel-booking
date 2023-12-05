@@ -1,173 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Hotel booking</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/global_styles.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav id="navBar">
-        <img src="../assets/images/logo.png" alt="logo" class="logo" />
-        <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="./room_page.html">Rooms</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <a href="./register_page.html" class="register-btn">Register Now</a>
-        <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
-      </nav>
-      <div class="container">
-        <h1>Find Your Next Stay</h1>
-        <div class="search-bar">
-          <form id="searchForm" action="room_page.html">
-            <div>
-              <label for="checkin">Check in</label>
-              <input id="checkin" type="date" />
-            </div>
-            <div>
-              <label for="checkout">Check out</label>
-              <input id="checkout" type="date" />
-            </div>
-            <div>
-              <label for="quantity">Number of rooms</label>
-              <select name="quantity" id="quantity">
-                <!-- JavaScript code will generate the options -->
-              </select>
-            </div>
-            <div>
-              <label for="guest">Guest</label>
-              <select name="guest" id="guest">
-                <!-- JavaScript code will generate the options -->
-              </select>
-            </div>
-            <button type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>RealHood Hotel</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/global_styles.css">
+</head>
+
+<body>
+  <header>
+    <nav id="navBar">
+      <img src="../assets/images/logo.png" alt="logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="./room_page.html">Rooms</a></li>
+        <li><a href="./contact_page.html">Contact</a></li>
+      </ul>
+      <a href="./register_demo.html" class="register-btn" id="register_btn">Register Now</a>
+      <i class="fas fa-bars" onclick="toggleBtn()"></i>
+
+      <i class="fa-solid fa-bars" onclick="document.getElementById('navBar').classList.toggle('hidemenu')"></i>
+    </nav>
     <div class="container">
-      <h2 class="sub-title">Rooms</h2>
-      <div class="rooms"><!-- room item goes here --></div>
-      <h2 class="sub-title">Services</h2>
-      <div class="services">
-        <div>
-          <img src="../assets/images/service-1.png" alt="" />
-          <span>
-            <h3>Restaurant</h3>
-            <p>
-              Indulge in a culinary journey at our hotel's exquisite restaurant.
-            </p>
-          </span>
-        </div>
-        <div>
-          <img src="../assets/images/service-2.png" alt="" />
-          <span>
-            <h3>Swimming pool</h3>
-            <p>Immerse yourself in serenity at our refreshing hotel pool.</p>
-          </span>
-        </div>
-        <div>
-          <img src="../assets/images/service-3.png" alt="" />
-          <span>
-            <h3>Spa Treatments</h3>
-            <p>
-              Discover blissful tranquility through our curated range of spa
-              indulgences.
-            </p>
-          </span>
-        </div>
-        <div>
-          <img src="../assets/images/service-4.png" alt="" />
-          <span>
-            <h3>Bar</h3>
-            <p>
-              Elevate your evening at our stylish hotel bar, where spirits meet
-              elegance.
-            </p>
-          </span>
-        </div>
+      <h1>Find Your Best Stay</h1>
+      <div class="search-bar">
+        <form id="searchForm" action="room_page.html">
+          <div>
+            <label for="checkin">Check in</label>
+            <input id="checkin" type="date">
+          </div>
+          <div>
+            <label for="checkout">Check out</label>
+            <input id="checkout" type="date">
+          </div>
+          <div>
+            <label for="quantity">Number of rooms</label>
+            <select name="quantity" id="quantity">
+              <script>
+                for (let i = 1; i <= 10; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+          <div>
+            <label for="guest">Guest</label>
+            <select name="guest" id="guest">
+              <script>
+                for (let i = 2; i <= 3; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
       </div>
-      <div class="banner">
-        <h3>The Hetol <br />makes magical family memories</h3>
-        <p>
-          You're never too young - or too old - to enjoy unforgettable
-          experiences.
-        </p>
-        <a href="#" class="banner-btn"
-          >Step inside <i class="fa-solid fa-circle-arrow-right"></i
-        ></a>
-      </div>
-      <h2 class="sub-title">A Special Touch</h2>
-      <div class="special">
-        <div>
-          <img src="../assets/images/special-1.png" alt="" />
-          <p>Signature cocktails</p>
-          <span> Sip a zodiac cocktail and watch the stars move. </span>
-        </div>
-        <div>
-          <img src="../assets/images/special-2.png" alt="" />
-          <p>New hair, new you</p>
-          <span
-            >David Mallett - The renowned Australian hairdresser welcomes you to
-            an exclusive experience.
-          </span>
-        </div>
-        <div>
-          <img src="../assets/images/special-3.png" alt="" />
-          <p>Learn from the best</p>
-          <span
-            >Our cooking classes fill up fast. Many return for seconds. Discover
-            why.</span
-          >
-        </div>
-      </div>
-      <a href="#" class="book-btn">Book now</a>
-      <div class="about-msg">
-        <h2>About Staybnb</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          aliquid error officiis dolores possimus, at assumenda veritatis magnam
-          aut explicabo perferendis facilis quam vel? Deserunt quod maxime
-          possimus mollitia soluta!
-        </p>
-      </div>
-      <footer>
-        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://linkedin.com"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="https://instagram.com"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <hr />
-        <p>Copyright &copy; 2023, The RealHood</p>
-      </footer>
     </div>
+  </header>
+  <div class="container">
+    <h2 class="sub-title">Rooms</h2>
+    <div class="rooms"><!-- room item goes here --></div>
+    <h2 class="sub-title">Services</h2>
+    <div class="services">
+      <div>
+        <img src="../assets/images/service-1.png" alt="">
+        <span>
+          <h3>Restaurant</h3>
+          <p>
+            Indulge in a culinary journey at our hotel's exquisite restaurant.
+          </p>
+        </span>
+      </div>
+      <div>
+        <img src="../assets/images/service-2.png" alt="">
+        <span>
+          <h3>Swimming pool</h3>
+          <p>Immerse yourself in serenity at our refreshing hotel pool.</p>
+        </span>
+      </div>
+      <div>
+        <img src="../assets/images/service-3.png" alt="">
+        <span>
+          <h3>Spa Treatments</h3>
+          <p>
+            Discover blissful tranquility through our curated range of spa
+            indulgences.
+          </p>
+        </span>
+      </div>
+      <div>
+        <img src="../assets/images/service-4.png" alt="">
+        <span>
+          <h3>Bar</h3>
+          <p>
+            Elevate your evening at our stylish hotel bar, where spirits meet
+            elegance.
+          </p>
+        </span>
+      </div>
+    </div>
+    <div class="banner">
+      <h3>RealHood <br>makes magical family memories</h3>
+      <p>
+        You're never too young - or too old - to enjoy unforgettable
+        experiences.
+      </p>
+      <a href="#" class="banner-btn">Step inside <i class="fa-solid fa-circle-arrow-right"></i></a>
+    </div>
+    <h2 class="sub-title">A Special Touch</h2>
+    <div class="special">
+      <div>
+        <img src="../assets/images/special-1.png" alt="">
+        <p>Signature cocktails</p>
+        <span> Sip a zodiac cocktail and watch the stars move. </span>
+      </div>
+      <div>
+        <img src="../assets/images/special-2.png" alt="">
+        <p>New hair, new you</p>
+        <span>David Mallett - The renowned Australian hairdresser welcomes you to
+          an exclusive experience.
+        </span>
+      </div>
+      <div>
+        <img src="../assets/images/special-3.png" alt="">
+        <p>Learn from the best</p>
+        <span>Our cooking classes fill up fast. Many return for seconds. Discover
+          why.</span>
+      </div>
+    </div>
+    <a href="./room_page.html" class="book-btn">Book now</a>
+    <div class="about-msg">
+      <h2>About RealHood</h2>
+      <p>
+        With a special mission and vision, we invite you to embark on a
+        journey to find a peaceful space containing cultural features imbued
+        with the spirit of Vietnamese identity, where people bond and
+        cordially exchange each other. sincere feelings. Spread across all
+        regions of the beautiful country of Vietnam and other countries in
+        Southeast Asia, RealHood accompanies you everywhere, for every
+        journey, at every stage of life.
+      </p>
+    </div>
+    <footer>
+      <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+      <hr>
+      <p>Copyright &copy; 2023, RealHood</p>
+    </footer>
+  </div>
 
-    <script src="../js/app.js" type="module"></script>
-    <script src="../js/setTime.js"></script>
-    <script src="../js/quantitySelect.js"></script>
-    <script src="../js/roomFilter.js"></script>
-  </body>
+  <script src="../js/app.js" type="module"></script>
+  <script src="../js/setTime.js"></script>
+  <script src="../js/roomFilter.js"></script>
+</body>
+
 </html>
