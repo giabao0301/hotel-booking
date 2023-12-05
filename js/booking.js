@@ -33,8 +33,8 @@ leftSide.innerHTML = roomInfoHtmls;
 
 const totalAmountHtmls = `<table class="table">
                               <tr>
-                                <td>${roomPrice} x nights</td>
-                                <td class="price">${roomPrice * 2} USD</td>
+                                <td>${roomPrice} x ${dayNumber} nights</td>
+                                <td class="price">${roomPrice * dayNumber} USD</td>
                               </tr>
                               <tr class="total">
                                 <td>Total</td>
