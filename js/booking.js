@@ -71,3 +71,15 @@ checkout.addEventListener('change', () => {
   const totalPriceElement = document.getElementById('totalPrice');
   totalPriceElement.textContent = `${totalPrice} USD`;
 })
+
+const bookingButton = document.getElementById('booking_btn')
+const phoneInput = document.getElementById('phone-num')
+const nameInput = document.getElementById('full-name')
+console.log(nameInput.value);
+console.log(phoneInput.value);
+bookingButton.addEventListener('click', () => {
+  console.log(nameInput.value);
+  console.log(phoneInput.value);
+  window.location.href = `payment.html?phoneNum=${phoneInput.value}&fullName=${nameInput.value}&price=${roomPrice}&totalPrice=${totalPrice}&night=${dayNumber}&roomNumber=${quantitySelect.value}`;
+
+})
