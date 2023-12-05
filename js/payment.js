@@ -16,6 +16,7 @@ const paymentPhone = document.getElementById('payment-phone')
 const paymentSubmitButton = document.getElementById('payment-submit-btn')
 const emailInput = document.getElementById('email')
 const cardNumberInput = document.getElementById('card-number')
+const cvvInput = document.getElementById('cvv')
 
 paymentPrice.textContent = roomPriceParam
 paymentNight.textContent = nightsParam
@@ -25,7 +26,7 @@ paymentUsername.textContent = fullNameParam
 paymentPhone.textContent = phoneNumberParam
 console.log(emailInput.value);
 paymentSubmitButton.addEventListener('click', () => {
-    if (emailInput.value != '' && cardNumberInput.value != '') {
+    if (emailInput.value != '' && cardNumberInput.value != '' && cvvInput.value) {
         window.location.href = `index.html`;
     } else {
         alert('Please input required information')
