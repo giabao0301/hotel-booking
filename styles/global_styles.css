@@ -28,6 +28,10 @@ nav {
     z-index: 100;
 }
 
+nav .nav-links {
+    margin-left: 100px;
+}
+
 .nav-links li {
     list-style: none;
     display: inline-block;
